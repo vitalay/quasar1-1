@@ -7,10 +7,17 @@
 
 // Configuration for your app
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({ 
+  publicPath: process.env.NODE_ENV === 'production' ? '/testttt/' : '/',
+  transpileDependencies: true
+
 
 const { configure } = require('quasar/wrappers')
 
 module.exports = configure(function (/* ctx */) {
+
+
   return {
     // https://v2.quasar.dev/quasar-cli-vite/prefetch-feature
     // preFetch: true,
@@ -201,4 +208,5 @@ module.exports = configure(function (/* ctx */) {
       // extendBexManifestJson (json) {}
     }
   }
+})
 })
