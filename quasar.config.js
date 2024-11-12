@@ -132,7 +132,7 @@ module.exports = defineConfig({
   transpileDependencies: true
 })
 
-module.exports = configure(function (ctx) {
+module.exports = configure(function (/* ctx */) {
   return {
     boot: [],
 
